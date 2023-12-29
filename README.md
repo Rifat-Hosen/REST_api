@@ -14,7 +14,7 @@ User requested url : localhost:3000/search?keyword=mango
 * Node
 * Express
 * Mongodb
-* npm
+* yarn
 * git
 
 ## Common setup
@@ -76,10 +76,10 @@ yarn install
     ```
 
 
-## NOTE [some aditional middleware can be added]
-    * Use Helmet
-    * Use cors
-    * Use Mongo Sanitize
-    * Use express-rate-limit
-    * Use Express Validator
+## NOTE [ some aditional middleware can be added]
+    * Helmet  {secure the application against common vulnerabilities}
+    * Cors  {mitigate potential security risks associated with cross-origin requests}
+    * Mongo-Sanitize  {susceptible to NoSQL injection attacks}
+    * express-rate-limit  {prevent abuse and protect against certain types of DOS attacks}
+    * Express-Validator  {validate and sanitize incoming request data}
     
