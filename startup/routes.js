@@ -2,6 +2,8 @@ const searchRouter = require("./../routes/searchRouter");
 
 module.exports = (app) => {
   app.use("/search", searchRouter);
+
+  //exception handling for invalid url
   
   app.all("*", (req, res, next) => {
     try {
@@ -12,7 +14,7 @@ module.exports = (app) => {
       next();
     } catch (error) {
       console.error(`Can't find ${req.originalUrl} on this server!`);
-      res.status(500).json({ error: 'Internal Server Error' });
+      res.status(400).json({ error: 'The request URL is invalid' });
     }
   });
 

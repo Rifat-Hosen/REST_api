@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+//Connect with Mongodb database
 module.exports = () => {
    mongoose.connect(process.env.DATABASE_URL, {
         // useNewUrlParser: true,
